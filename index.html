@@ -30,6 +30,19 @@
                 <li><a href="#morte">Morte</a></li>
             </ul>
         </nav>
+
+        <nav>
+            <div class="menu-toggle">☰</div> <!-- Ícone do menu -->
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#nascimento">Infância</a></li>
+                <li><a href="#carreira">Carreira</a></li>
+                <li><a href="#pessoal">Vida Pessoal</a></li>
+                <li><a href="#discografia">Discografia</a></li>
+                <li><a href="#morte">Morte</a></li>
+            </ul>
+        </nav>
+        
            
             <a href="#inicio" class="back-to-top" title="Voltar ao início">↑</a>
 
@@ -293,6 +306,13 @@
                 
 
         </section>
+
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.menu').classList.toggle('active');
+            });
+        </script>
+        
 
         <footer>
             <div class="rodape">

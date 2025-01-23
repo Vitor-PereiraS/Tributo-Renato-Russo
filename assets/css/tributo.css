@@ -10,11 +10,19 @@ html {
 body {
     margin: 0px;
     padding: 0px;
-    padding: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
     
 }
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Ocupa toda a largura */
+    overflow-x: hidden; /* Evita barras de rolagem horizontal */
+}
+
 .container_header {
     display: flex;
 
@@ -137,6 +145,10 @@ nav a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    max-width: 100%; /* Garante que não exceda a largura da tela */
+    padding: 0 10px; /* Adiciona espaçamento interno */
+    margin: 0 auto; /* Centraliza os elementos */
+    flex-wrap: wrap; /* Permite que os itens se reorganizem em telas pequenas */
     
 }
 .nascimento_imagem {
@@ -178,10 +190,16 @@ nav a:hover {
     font-size: 70px;
     text-shadow:0px 1px 0px #ffffff;
     padding: 20px;
-    
     text-align: center;
 
 }
+
+/* Estilo para centralizar textos e imagens */
+.titulo, .texto, h1, h2 {
+    text-align: center; /* Centraliza os títulos e textos */
+    margin: 0 auto; /* Remove margens extras */
+}
+
 .pessoal {
     display: flex;
     flex-direction: column;
@@ -316,8 +334,9 @@ nav a:hover {
 .discografia  {
     
     display: grid;
-    grid-template-columns: repeat(3, minmax(0px, 1fr));
-    gap: 10px;
+    grid-template-columns: 1fr; /* 1 disco por linha em telas pequenas */
+    gap: 15px; /* Espaçamento entre os discos */
+    margin: 20px; /* Espaçamento externo */
     margin-right: 100px;
     margin-left: 100px;
     margin-bottom: 100px;
@@ -327,6 +346,7 @@ img {
     max-width: 100%; 
     height: auto; 
     display: block; 
+    margin: auto; /* Centraliza as imagens */
 
 }
 .disc1{
@@ -344,18 +364,20 @@ img {
 }
 .div_img {
     
-    .div_img {
         background-color: #f0a500;
-        max-width: 100%;
+        width: 100%; /* Largura total do contêiner */
+        max-width: 500px; /* Tamanho máximo para imagens grandes */
+        margin: 0 auto; /* Centraliza os discos */
         max-height: auto;
         aspect-ratio: 500 / 412; /* Mantém a proporção da imagem */
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: auto; /* Centraliza o contêiner */
     }
     
     
-}
+
 .img_disc1:hover,
 .img_disc:hover {
     background-color: #f0a500;
@@ -461,71 +483,50 @@ footer a:hover {
 
     
 
+/* Responsividade para telas pequenas (smartphones) */
 @media screen and (max-width: 768px) {
-    /* Deixe o menu vertical em telas menores */
-    nav ul {
-        flex-direction: column; 
-        align-items: center; 
-    }
-
-    nav li {
-        margin: 10px 0; /* Espaçamento entre os itens */
-    }
-
-    /* Reduza os títulos */
-    h1, h2 {
-        font-size: 24px;
-    }
-
-    /* Ajuste as imagens da discografia */
-    .div_img, .img_disc1, .img_disc {
-        width: 100%; /* Use a largura total da tela */
-        height: auto; /* Preserve a proporção */
+    .menu {
+        flex-direction: column;
+        padding: 0;
     }
 
     .discografia {
-        grid-template-columns: 1fr; /* Mostre um disco por linha */
-        margin: 0 20px; /* Reduza as margens laterais */
-    }
-
-    /* Ajuste a seção de textos */
-    .texto {
-        font-size: 18px; 
-        line-height: 1.6;
+        grid-template-columns: 1fr; /* 1 coluna */
     }
 
     .container {
-        flex-direction: column; /* Alterne para exibir em colunas */
-        text-align: center; /* Centralize o texto */
+        flex-direction: column; /* Elementos empilhados verticalmente */
+        align-items: center; /* Centraliza os elementos */
     }
 
-    /* Ajuste as imagens nas seções */
-    .nascimento_imagem, .carreira img {
-        width: 100%;
+    h1, h2 {
+        font-size: 18px; /* Reduz tamanho do texto */
+    }
+
+    .texto {
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 10px 0;
+    }
+
+    .div_img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    /* Ajuste as margens das seções */
-    .container {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    /* Ajuste o grid da discografia */
+/* Ajuste para tablets (telas médias) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
     .discografia {
-        grid-template-columns: repeat(2, 1fr); /* Mostre dois discos por linha */
-        gap: 15px; /* Aumente o espaçamento entre eles */
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
     }
 
-    /* Ajuste o tamanho de texto para não ocupar muito espaço */
-    h1 {
-        font-size: 36px;
+    .container {
+        max-width: 90%; /* Centraliza e ajusta a largura */
     }
 
     .texto {
-        font-size: 20px;
-        line-height: 1.6;
+        font-size: 16px;
     }
 }
 
@@ -534,4 +535,48 @@ footer a:hover {
         max-width: 1200px; /* Limite a largura do conteúdo */
         margin: auto; /* Centralize no meio da página */
     }
+}
+
+/* Ocultar o menu padrão em telas pequenas */
+.menu {
+    display: none;
+    flex-direction: column;
+    background-color: #000;
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.menu li {
+    margin: 10px 0; /* Ajuste o espaçamento */
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background-color: #f0a500;
+}
+
+/* Botão do menu "hambúrguer" */
+.menu-toggle {
+    display: block;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+    text-align: right;
+    background-color: #000;
+}
+
+/* Mostrar o menu quando ativado */
+.menu.active {
+    display: flex;
 }
