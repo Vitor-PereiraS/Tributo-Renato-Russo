@@ -1,0 +1,456 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0px;
+    padding: 0px;
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}
+.container_header {
+    display: flex;
+
+}
+img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+
+header {
+    background-color: black;
+    margin:0px;
+    text-align: center;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid #ffffff;
+    
+
+}
+.imagem_legiao {
+    height: 90px;
+    width: 65px;
+    margin-top: 23px;
+    margin-left: 5px;
+    transform: rotate(20deg);
+  
+}
+header h1 {
+    
+    color: rgb(255, 255, 255);
+    font-size: 60px;
+    margin-top: 10px;
+    white-space:nowrap;
+
+}
+.header1 {
+    flex: 10;
+}
+.header2 {
+    flex: 1;
+}
+
+nav {
+    background-color: #000; 
+    padding: 10px;
+    
+    
+}
+
+nav ul {
+    list-style: none; 
+    display: flex; 
+    justify-content: center; 
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin:15px; 
+}
+
+nav a {
+    color: #fff; 
+    text-decoration: none; 
+    font-size: 25px; 
+}
+
+nav a:hover {
+    text-decoration: underline; 
+    color: #f0a500; 
+}
+
+
+.back-to-top {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: #000000; 
+    color: #fff; 
+    font-size: 24px; 
+    text-align: center; 
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    line-height: 50px; 
+    text-decoration: none; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); 
+    cursor: pointer; 
+    z-index: 1000; 
+    transition: opacity 2s linear, visibility 2s linear;
+    opacity: 0;
+    visibility: hidden;
+    animation: botao 0.5s ease-in-out 2s forwards;
+}
+
+.back-to-top:hover {
+    background-color: #f0a500; 
+}
+@keyframes botao {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.nascimento {
+    display: flex;
+    background-color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+    
+    
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.nascimento_imagem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-left: 100px;
+    padding: 20px;
+    margin-right: 50px;
+     
+}
+.nascimento_imagem img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+   
+}
+
+.nascimento_texto {
+    flex: 2;
+    margin-right: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    color: #000000;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    flex-wrap: nowrap;
+    
+    
+}
+.texto {
+    font-size: 25px;
+    line-height: 40px;
+
+}
+.titulo {
+    font-size: 70px;
+    text-shadow:0px 1px 0px #ffffff;
+    padding: 20px;
+    
+    text-align: center;
+
+}
+.pessoal {
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+   
+    
+}
+.fundo {
+    background-image:url(https://novabrasilfm.com.br/app/uploads/2024/03/renato_russo_1.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
+    border-bottom: 3px solid #000;
+    
+    
+}
+.titulo_pessoal {
+    text-align: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: #000;
+   
+}
+.titulo_pessoal h1{
+    font-size: 75px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+.pessoal_texto {
+    display: flex;
+    flex-direction:column;
+    
+    
+}
+.vida1 {
+    flex: 1;
+    margin-left: 100px;
+}
+.vida2 {
+    flex: 1;
+    margin-left: 50px;
+}
+.vida3 {
+    flex: 1;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+.vida1,.vida2,
+.vida3 {
+    text-align: justify;
+    margin-top: 200px;
+    padding: 10px;
+    color: #000000;
+    text-shadow:1px 1px 1px #000000;
+    margin-bottom: 200px;
+    
+    
+    
+}
+
+.vida1,.vida2,
+.vida3{
+    background-color:#ffffff;
+    opacity: 0.65;
+}
+.pessoal h2 {
+    text-align: center;
+    font-weight: bold;
+
+}
+.titulo_carreira {
+    color: #ffffff;
+    text-align: center;
+    font-size: 50px;
+    background-color: #000000;
+    padding: 10xp;
+    
+}
+.carreira {
+    display: flex;
+    color: #000000;
+    text-align:left;
+    background-color: #ffffff;
+    border-bottom: 5px solid #000;
+
+}
+.carreira h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.pessoal_texto {
+    display: flex;
+    flex-direction: row;
+
+}
+.titulo_carreira {
+    display: flex;
+    flex-direction: column;
+}
+.flexcolumn {
+    display: flex;
+    flex-direction: column;
+}
+.carreira1 {
+    margin-left: 100px;
+    flex: 1;
+    text-align: justify;
+    margin-right: 20px;
+    margin-bottom: 50px;
+}
+.carreira2 {
+    
+    flex:1;
+    margin-right: 100px;
+    text-align: justify;
+    border-left: 3px solid #ffffff;
+    padding: 20px;
+}
+
+.img {
+    object-fit: cover;
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+}
+.discografia  {
+    
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    gap: 10px;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    border-bottom: 3px solid #000;
+}
+img {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+
+}
+.disc1{
+   
+    border: 3px solid #000000;
+}
+.disc0 {
+
+    grid-column: 1 / span 3;
+}
+.img_disc1, .img_disc {
+    width: 500px;
+    height: 412px;
+
+}
+.div_img {
+    
+    background-color: #f0a500; 
+    max-width: 700px;
+    max-height: 700px;
+    
+}
+.img_disc1:hover,
+.img_disc:hover {
+    background-color: #f0a500;
+    opacity: 0.8; 
+
+}
+.disc0{
+    
+    text-align: center;
+
+}
+.disc0 h1 {
+    font-size: 75px;
+
+}
+.titulo_disco {
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #000000;
+    padding: 5px;
+    text-transform: uppercase;
+    
+}
+.titulo_disco h2{
+    font-size: 20px;    
+}
+
+
+.text_disc {
+    display: flex;
+    flex: 5;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: justify;
+    margin-right: 100px;
+
+}
+
+
+.titulo_disco {
+    color: #ffffff;
+    font-size: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50x;
+    padding: 10px;
+    background-color: #000000;
+    
+}
+
+#morte {
+    background-image:url(https://www.jornalopcao.com.br/assets/2021/10/renato-russo-25-anos-sem2.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    align-content: center;
+    height: auto;
+}
+.titulo_morte {
+    color: #000000;
+    font-size: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50x;
+    margin-left: 500px;
+    
+   
+}
+.text_disc_morte {
+    display: flex;
+    flex: 5;
+    font-size: 25px;
+    line-height: 40px;
+    text-align: justify;
+    margin-right: 50px;
+    margin-left: 30px;
+    margin-bottom: 200px;
+
+}
+.titulo_morte {
+    background-color:#ffffff;
+    opacity: 0.65;
+    margin-right: 100px;
+    margin-left: 600PX;
+    
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: lightslategray;
+    padding: 20px;
+}
+footer a:hover {
+    color: blue;
+
+}
+
+    
+
