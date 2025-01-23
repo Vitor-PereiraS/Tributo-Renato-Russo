@@ -344,9 +344,16 @@ img {
 }
 .div_img {
     
-    background-color: #f0a500; 
-    max-width: 700px;
-    max-height: 700px;
+    .div_img {
+        background-color: #f0a500;
+        max-width: 100%;
+        max-height: auto;
+        aspect-ratio: 500 / 412; /* Mantém a proporção da imagem */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
     
 }
 .img_disc1:hover,
@@ -454,3 +461,77 @@ footer a:hover {
 
     
 
+@media screen and (max-width: 768px) {
+    /* Deixe o menu vertical em telas menores */
+    nav ul {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    nav li {
+        margin: 10px 0; /* Espaçamento entre os itens */
+    }
+
+    /* Reduza os títulos */
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    /* Ajuste as imagens da discografia */
+    .div_img, .img_disc1, .img_disc {
+        width: 100%; /* Use a largura total da tela */
+        height: auto; /* Preserve a proporção */
+    }
+
+    .discografia {
+        grid-template-columns: 1fr; /* Mostre um disco por linha */
+        margin: 0 20px; /* Reduza as margens laterais */
+    }
+
+    /* Ajuste a seção de textos */
+    .texto {
+        font-size: 18px; 
+        line-height: 1.6;
+    }
+
+    .container {
+        flex-direction: column; /* Alterne para exibir em colunas */
+        text-align: center; /* Centralize o texto */
+    }
+
+    /* Ajuste as imagens nas seções */
+    .nascimento_imagem, .carreira img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* Ajuste as margens das seções */
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    /* Ajuste o grid da discografia */
+    .discografia {
+        grid-template-columns: repeat(2, 1fr); /* Mostre dois discos por linha */
+        gap: 15px; /* Aumente o espaçamento entre eles */
+    }
+
+    /* Ajuste o tamanho de texto para não ocupar muito espaço */
+    h1 {
+        font-size: 36px;
+    }
+
+    .texto {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px; /* Limite a largura do conteúdo */
+        margin: auto; /* Centralize no meio da página */
+    }
+}
